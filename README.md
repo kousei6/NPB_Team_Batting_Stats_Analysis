@@ -1,9 +1,10 @@
 # NPB_Team_Batting_Stats_Analysis
 
-このリポジトリは、NPB公式サイトのチーム打撃（tmb_c.html）とチーム投手（tmb_p.html）ページのURLを生成し、2015年〜2025年の各年についてテーブルをスクレイピングしてCSVにまとめます。
+
+このリポジトリは、NPB公式サイトのチーム打撃（セ・リーグ: tmb_c.html、パ・リーグ: tmb_p.html）のURLを生成し、2015年〜2025年の各年についてテーブルをスクレイピングしてCSVにまとめます。
 
 ## 概要
-- **URL生成**: 年度ごとの打撃・投手ページURLを作成して出力・保存
+- **URL生成**: 年度ごとの打撃ページURL（セ・リーグ/パ・リーグ）を作成して出力・保存
 - **スクレイピング**: URL一覧から各ページのテーブルを取得しCSVへ保存
 - **出力**: 年・リーグごとのテーブルを縦に連結したCSV
 
@@ -36,7 +37,7 @@ pip install requests beautifulsoup4
 	 - 出力: [save_csv/scraped_baseball_stats.csv](save_csv/scraped_baseball_stats.csv)
 
 ## 主要ファイル
-- [url_list_baseball_c_p.py](url_list_baseball_c_p.py): 2015〜2025年の打撃・投手ページURLを生成し、`baseball_urls.txt` に保存
+- [url_list_baseball_c_p.py](url_list_baseball_c_p.py): 2015〜2025年の打撃ページURL（セ・リーグ/パ・リーグ）を生成し、`baseball_urls.txt` に保存
 - [npb_c_p_scraping.py](npb_c_p_scraping.py): URL一覧からページを取得し、テーブルを抽出してCSVに保存（1秒の待機を挿入）
 - [save_csv/scraped_baseball_stats.csv](save_csv/scraped_baseball_stats.csv): 取得したテーブルをURLごとに区切って連結したCSV
 - 参考: [save_txt/baseball_urls.txt](save_txt/baseball_urls.txt): URL一覧の保存例（別フォルダ）
